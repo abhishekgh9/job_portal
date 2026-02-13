@@ -58,15 +58,15 @@ const JobDescription = () => {
                 <div>
                     <h1 className='font-bold text-xl'>{singleJob?.title}</h1>
                     <div className='flex items-center gap-2 mt-4'>
-                        <Badge className={'text-blue-700 font-bold'} variant="ghost">{singleJob?.position} Positions</Badge>
-                        <Badge className={'text-[#F83002] font-bold'} variant="ghost">{singleJob?.jobType}</Badge>
-                        <Badge className={'text-[#7209B7] font-bold'} variant="ghost">{singleJob?.salary} LPA</Badge>
+                        <Badge className={'text-[#5D9C7C] font-bold'} variant="ghost">{singleJob?.position} Positions</Badge>
+                        <Badge className={'text-[#5D9C7C] font-bold'} variant="ghost">{singleJob?.jobType}</Badge>
+                        <Badge className={'text-[#8EBB82] font-bold'} variant="ghost">{singleJob?.salary} LPA</Badge>
                     </div>
                 </div>
                 <Button
                 onClick={isApplied ? null : applyJobHandler}
                     disabled={isApplied}
-                    className={`rounded-lg text-white ${isApplied ? 'bg-gray-600 cursor-not-allowed' : 'bg-[#7209b7] hover:bg-[#5f32ad]'}`}>
+                    className={`rounded-lg text-white ${isApplied ? 'bg-gray-600 cursor-not-allowed' : 'bg-[#5D9C7C] hover:bg-[#4a7d63]'}`}>
                     {isApplied ? 'Already Applied' : 'Apply Now'}
                 </Button>
             </div>

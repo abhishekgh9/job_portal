@@ -9,11 +9,13 @@ import AppliedJobTable from './AppliedJobTable'
 import UpdateProfileDialog from './UpdateProfileDialog'
 import { useSelector } from 'react-redux'
 import useGetAppliedJobs from '@/hooks/useGetAppliedJobs'
+import store from '@/redux/store'
 
 
 
 // const skills = ["HTML", "CSS", "JS", "REACT.JS"];
 const isResume = true;
+
 const Profile = () => {
     useGetAppliedJobs();
     const [open,setOpen]=useState(false);
@@ -26,7 +28,7 @@ const Profile = () => {
                 <div className='flex justify-between'>
                     <div className='flex items-center gap-4'>
                         <Avatar className="h-15 w-15">
-                            <AvatarImage src="https://tse3.mm.bing.net/th/id/OIP.ZwgJv5gztOn2jHbTWgIWngHaHa?w=550&h=550&rs=1&pid=ImgDetMain&o=7&rm=3" alt="profile" />
+                            <AvatarImage src={user?.profile?.profilePhoto} alt="profile" />
 
                         </Avatar>
                         <div>
@@ -51,7 +53,7 @@ const Profile = () => {
                     <div className='flex items-center gap-1'>
 
                         {
-                            user?.profile?.skills.length != 0 ? user?.profile?.skills.map((item, index) => <Badge key={index} className={"bg-[#4c5de3] text-white rounded-3xl"}>{item}</Badge>) : <span>NA</span>
+                            user?.profile?.skills.length != 0 ? user?.profile?.skills.map((item, index) => <Badge key={index} className={"bg-[#5D9C7C] text-white rounded-3xl"}>{item}</Badge>) : <span>NA</span>
                         }
                     </div>
 
@@ -61,7 +63,7 @@ const Profile = () => {
                         Resume
                     </Label>
                     {
-                        isResume ? <a target='blank' href={user?.profile?.resume} className='text-blue-500 hover:underline cursor-pointer '>{user?.profile?.resumeOriginalName}</a> : <span>NA</span>
+                        isResume ? <a target='blank' href={user?.profile?.resume} className='text-[#5D9C7C] hover:underline cursor-pointer '>{user?.profile?.resumeOriginalName}</a> : <span>NA</span>
                     }
 
                 </div>

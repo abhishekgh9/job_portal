@@ -26,7 +26,7 @@ const Companies = () => {
                     placeholder='Filter by name' 
                     onChange={(e)=>setInput(e.target.value)}
                     />
-                    <Button className='bg-[#7209B7] text-white' onClick={()=>navigate("/admin/companies/create")}>
+                    <Button className='bg-[#5D9C7C] hover:bg-[#4a7d63] text-white' onClick={()=>navigate("/admin/companies/create")}>
                         New Company
                     </Button>
                 </div>
